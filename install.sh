@@ -1,5 +1,6 @@
 sudo apt-get update
 sudo apt-get -y upgrade
+sudo apt-get -y autoremove
 
 if ! hash git 2>/dev/null; then
 	sudo apt-get install git
@@ -17,6 +18,12 @@ if ! hash tmux 2>/dev/null; then
 	sudo apt-get install tmux
 else
 	echo "tmux already installed";
+fi
+
+if ! hash g++ 2>//dev/null; then
+	sudo apt-get install g++
+else
+	echo "g++ already installed"
 fi
 
 if ! hash spotify 2>/dev/null; then
