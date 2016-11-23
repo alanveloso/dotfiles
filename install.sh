@@ -20,7 +20,7 @@ else
 	echo "tmux already installed";
 fi
 
-if ! hash g++ 2>//dev/null; then
+if ! hash g++ 2>/dev/null; then
 	sudo apt-get install g++
 else
 	echo "g++ already installed"
