@@ -3,25 +3,25 @@ sudo apt-get -y upgrade
 sudo apt-get -y autoremove
 
 if ! hash git 2>/dev/null; then
-	sudo apt-get install git
+	sudo apt-get -y install git
 else
 	echo "git already installed";
 fi
 
 if ! hash vim 2>/dev/null; then
-	sudo apt-get install vim
+	sudo apt-get -y install vim
 else
 	echo "vim already installed";
 fi
 
 if ! hash tmux 2>/dev/null; then
-	sudo apt-get install tmux
+	sudo apt-get -y install tmux
 else
 	echo "tmux already installed";
 fi
 
 if ! hash g++ 2>/dev/null; then
-	sudo apt-get install g++
+	sudo apt-get -y install g++
 else
 	echo "g++ already installed"
 fi
@@ -36,7 +36,7 @@ else
 fi
 
 if ! hash stow 2>/dev/null; then
-	sudo apt-get install stow
+	sudo apt-get -y install stow
 else
 	echo "stow already installed";
 fi
