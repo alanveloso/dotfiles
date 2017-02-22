@@ -3,3 +3,6 @@
 	email = alantsv@gmail.com
 [push]
 	default = matching
+
+[alias]
+	s = status -s
