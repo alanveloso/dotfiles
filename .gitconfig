@@ -1,0 +1,24 @@
+[user]
+  name = alantsv
+  email = alantsv@gmail.com
+[push]
+  default = matching
+
+[alias]
+  a = add
+  s = status -s
+  st = stash
+  d = diff
+  b = branch
+  p = add -p
+  r = rebase
+
+  cm = commit
+  cmm = commit -m
+  co = checkout
+
+  ps = push
+  pl = pull
+
+[github]
+  user = alantsv
