@@ -14,15 +14,17 @@ fi
 
 echo "Installing apt packages"
 
-  sudo apt install -y git /
-    vim /
-    snapd /
-    google-chrome-stable
+sudo apt install -y git /
+  vim /
+  snapd /
+  google-chrome-stable
 
 echo "Installing snap packages"
-  sudo snap install spotify
-  sudo snap install --classic code
+
+sudo snap install spotify
+sudo snap install --classic code
 
 echo "Installing github packages"
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install --all
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --all
