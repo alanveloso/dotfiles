@@ -7,7 +7,7 @@ echo "Installing apt packages"
 
   sudo apt-get -y install git /
     vim /
-	snapd /
+    snapd /
 
 echo "Installing snap packages"
   sudo snap install spotify
