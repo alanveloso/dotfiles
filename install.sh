@@ -22,3 +22,7 @@ echo "Installing apt packages"
 echo "Installing snap packages"
   sudo snap install spotify
   sudo snap install --classic code
+
+echo "Installing github packages"
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install --all
