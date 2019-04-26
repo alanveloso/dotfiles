@@ -12,12 +12,9 @@ else
   echo "chrome already installed";
 fi
 
-echo "Installing apt packages"
+echo "Installing apt packages";
 
-sudo apt install -y git /
-  vim /
-  snapd /
-  google-chrome-stable
+sudo apt install -y git vim snapd google-chrome-stable
 
 echo "Installing snap packages"
 
