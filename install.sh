@@ -14,7 +14,7 @@ fi
 
 echo "Installing apt packages";
 
-sudo apt install -y git vim snapd google-chrome-stable
+sudo apt install -y git vim snapd google-chrome-stable telegram-desktop
 
 echo "Installing snap packages"
 
