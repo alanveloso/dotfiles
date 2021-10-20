@@ -5,7 +5,7 @@ if [ -d .dot ]; then
   exit 1
 fi
 
-git clone git@github.com:alanveloso/dotfiles.git $HOME/.dot
+git clone --bare https://github.com/alanveloso/dotfiles.git $HOME/.dot
 
 function dot {
   git --git-dir=$HOME/.dot/ --work-tree=$HOME $@
