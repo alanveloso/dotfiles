@@ -23,7 +23,7 @@ fi
 
 echo "Installing apt packages";
 
-sudo apt install -y git vim snapd google-chrome-stable telegram-desktop spotify
+sudo apt install -y git vim snapd google-chrome-stable telegram-desktop spotify-client
 
 echo "Installing github packages"
 
