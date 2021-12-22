@@ -30,6 +30,7 @@ if ! hash telegram-desktop 2>/dev/null; then
   sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
 else
   echo "telegram-desktop already installed"
+fi
 
 echo "Installing github packages"
 
