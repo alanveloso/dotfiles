@@ -1,5 +1,6 @@
 # dotfiles
 My personal dotfiles
 
-
-bash <(curl -s https://raw.githubusercontent.com/alanveloso/dotfiles/master/setup.sh)
+```sh
+wget -O - https://raw.githubusercontent.com/alanveloso/dotfiles/master/setup.sh | bash
+```
