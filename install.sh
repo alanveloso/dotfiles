@@ -3,6 +3,10 @@
 sudo apt update
 sudo apt upgrade -y
 
+echo "Installing apt packages";
+
+sudo apt install -y git vim snapd google-chrome-stable telegram-desktop spotify-client curl
+
 if ! hash google-chrome-stable 2>/dev/null; then
   echo "Adding chrome source list"
   sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
@@ -20,10 +24,6 @@ if ! hash spotify 2>/dev/null; then
 else
   echo "spotify already installed";
 fi
-
-echo "Installing apt packages";
-
-sudo apt install -y git vim snapd google-chrome-stable telegram-desktop spotify-client
 
 echo "Installing github packages"
 
