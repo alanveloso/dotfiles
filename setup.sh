@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd $HOME
+
 if [ -d .dot ]; then
   echo "Already installed dotfiles"
   exit 1
