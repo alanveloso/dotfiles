@@ -5,6 +5,8 @@ if [ -d .dot ]; then
   exit 1
 fi
 
+sudo apt install -y git
+
 git clone --bare https://github.com/alanveloso/dotfiles.git $HOME/.dot
 
 function dot {
