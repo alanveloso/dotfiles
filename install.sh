@@ -7,13 +7,12 @@ echo "Installing apt packages";
 
 sudo apt install -y git vim curl
 
-if ! hash spotify 2>/dev/null; then
-  echo "Installing spotify"
-  curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
-  sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list'
-  sudo apt update && sudo apt install spotify-client -y
-else
-  echo "spotify already installed";
+# Instalação do Spotify (forma dinâmica)
+KEY_URL=$(curl -s https://www.spotify.com/br-pt/download/linux/ | grep -oP 'https://download\.spotify\.com/debian/pubkey_[^"]+\.gpg' | head -n1)
+if [ -n "$KEY_URL" ]; then
+  curl -sS "$KEY_URL" | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+  echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+  sudo apt-get update && sudo apt-get install -y spotify-client && return 0
 fi
 
 if ! hash telegram-desktop 2>/dev/null; then
