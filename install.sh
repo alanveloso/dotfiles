@@ -2,20 +2,13 @@
 
 set -euo pipefail
 
-# Checagem de dependências mínimas
-for cmd in git curl wget gpg; do
-  if ! command -v $cmd &>/dev/null; then
-    echo "Erro: $cmd não está instalado. Instale antes de continuar." >&2
-    exit 1
-  fi
-done
-
 sudo apt update
 sudo apt upgrade -y
 
 echo "Installing apt packages";
 
 sudo apt install -y git vim curl
+
 
 # Instalação do Spotify (forma dinâmica)
 KEY_URL=$(curl -s https://www.spotify.com/br-pt/download/linux/ | grep -oP 'https://download\.spotify\.com/debian/pubkey_[^"]+\.gpg' | cut -d' ' -f1 | head -n1)
