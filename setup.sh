@@ -10,11 +10,8 @@ if [ -d .dot ]; then
 fi
 
 if ! command -v git &>/dev/null; then
-  echo "Erro: git não está instalado. Instale antes de continuar." >&2
-  exit 1
+  sudo apt install -y git
 fi
-
-sudo apt install -y git
 
 git clone --bare https://github.com/alanveloso/dotfiles.git $HOME/.dot || { echo "Erro ao clonar repositório bare." >&2; exit 1; }
 
